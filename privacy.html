@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — TranscriptKit</title>
+  
+  <meta name="description" content="TranscriptKit Privacy Policy. 100% private, no analytics, no tracking, zero personal data collected.">
+  <meta name="robots" content="index, follow">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/48.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .privacy-hero {
+      padding: 60px 0 30px 0;
+      text-align: center;
+    }
+    .privacy-content {
+      max-width: 820px;
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
+    .privacy-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-bottom: 24px;
+    }
+    .privacy-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+      color: var(--text-primary);
+    }
+    .privacy-card p, .privacy-card li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .privacy-card ul {
+      margin-left: 20px;
+      margin-top: 10px;
+      margin-bottom: 14px;
+    }
+    .privacy-highlight {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      color: #a7f3d0;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/icons/128.png" alt="TranscriptKit Logo" width="32" height="32">
+        <span>TranscriptKit</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="index.html#demo" class="nav-link">Live Demo</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="privacy.html" class="nav-link" style="color:#ffffff;">Privacy</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="https://chromewebstore.google.com/detail/transcriptkit-youtube-tra/jhkhpmmaiandgkfmlpcnteilpmohngiod" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          Add to Chrome
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="privacy-hero">
+    <div class="container">
+      <span class="section-tag">Transparency &amp; Trust</span>
+      <h1 class="section-title">Privacy Policy</h1>
+      <p class="section-desc">Last updated: November 2026 · Simple, plain-English privacy commitment.</p>
+    </div>
+  </section>
+
+  <div class="container privacy-content">
+    <div class="privacy-highlight">
+      🔒 <strong>Summary:</strong> TranscriptKit does not collect, transmit, share, or sell any of your data. Everything runs 100% locally on your machine.
+    </div>
+
+    <div class="privacy-card">
+      <h2>1. Zero Data Collection</h2>
+      <p>
+        TranscriptKit does not collect or log:
+      </p>
+      <ul>
+        <li>Your name, email address, IP address, or any personally identifiable information (PII).</li>
+        <li>Your browsing history, video watch history, or search history.</li>
+        <li>The contents of any video transcripts you copy, search, or export.</li>
+      </ul>
+      <p>We do not operate any tracking servers, analytics engines (such as Google Analytics or Mixpanel), or third-party advertising trackers.</p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>2. 100% Local Execution</h2>
+      <p>
+        All transcript extraction, subtitle parsing, timestamp calculations, formatting, paragraph merging, and file exports are executed strictly in-memory inside your Chrome browser sandbox.
+      </p>
+      <p>
+        No text or video metadata ever leaves your personal device.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>3. Minimal Permissions Justification</h2>
+      <p>
+        Under Manifest V3 guidelines, TranscriptKit requests only the absolute minimum permissions necessary to function:
+      </p>
+      <ul>
+        <li><strong>storage:</strong> Used strictly to save your preferred export format (Text/SRT/Markdown), language selection, and timestamp preferences locally on your computer via <code>chrome.storage.local</code>.</li>
+        <li><strong>https://www.youtube.com/*:</strong> Required solely to read captions on YouTube watch pages and inject the optional "Transcript" button next to Like/Share. The extension cannot access any other website or domain.</li>
+      </ul>
+    </div>
+
+    <div class="privacy-card">
+      <h2>4. Third-Party Services</h2>
+      <p>
+        TranscriptKit does not integrate with any external third-party APIs. The only network communications made are directly between your browser and YouTube's official caption endpoints when you actively request a transcript for a video you are watching.
+      </p>
+    </div>
+
+    <div class="privacy-card">
+      <h2>5. Contact Us</h2>
+      <p>
+        If you have any questions or require further information regarding this Privacy Policy, please feel free to reach out to us at:
+      </p>
+      <p style="margin-top:10px;">
+        <strong>Email:</strong> <a href="mailto:privacy@transcriptkit.app" style="color:var(--accent-cyan);">privacy@transcriptkit.app</a>
+      </p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 TranscriptKit. All rights reserved.</div>
+      <div><a href="support.html" style="color:var(--text-secondary); margin-right:16px;">Support</a> <a href="index.html" style="color:var(--text-secondary);">Home</a></div>
+    </div>
+  </footer>
+
+</body>
+</html>
+

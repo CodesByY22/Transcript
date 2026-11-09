@@ -56,7 +56,7 @@ console.log(`\nVersion: ${manifest.version}`);
 // Create zip archive
 try {
   if (process.platform === 'win32') {
-    execSync(`powershell.exe -Command "Compress-Archive -Path '${distDir}\\*' -DestinationPath '${zipFile}' -Force"`);
+    execSync(`powershell.exe -Command "$ProgressPreference = 'SilentlyContinue'; Compress-Archive -Path '${distDir}\\*' -DestinationPath '${zipFile}' -Force"`);
   } else {
     execSync(`cd "${distDir}" && zip -r "${zipFile}" ./*`);
   }

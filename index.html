@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TranscriptKit — 1-Click YouTube Transcript & Subtitle Extractor</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Copy, search, and export YouTube transcripts in clean Text, SRT subtitles, or Markdown. 100% free, private, no accounts, no tracking. Features clickable timestamps and chapter grouping.">
+  <meta name="keywords" content="youtube transcript, youtube transcript extractor, copy youtube transcript, youtube to text, download srt subtitles youtube, transcript chrome extension, youtube subtitles markdown">
+  <meta name="author" content="TranscriptKit">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TranscriptKit — 1-Click YouTube Transcript & Subtitle Extractor">
+  <meta property="og:description" content="Copy or export transcripts from any YouTube video in one click. Free, private, no accounts. Clean Text, SRT, and Markdown formats.">
+  <meta property="og:image" content="assets/og-image.png">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TranscriptKit — 1-Click YouTube Transcript & Subtitle Extractor">
+  <meta name="twitter:description" content="Copy or export transcripts from any YouTube video in one click. Free, private, no accounts.">
+  <meta name="twitter:image" content="assets/og-image.png">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/icons/48.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/icons/128.png">
+  <link rel="apple-touch-icon" href="assets/icons/128.png">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Structured Data (JSON-LD) for Chrome Extension SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TranscriptKit - YouTube Transcript & Subtitles",
+    "operatingSystem": "ChromeOS, Windows, macOS, Linux",
+    "applicationCategory": "BrowserExtension",
+    "applicationSubCategory": "Productivity",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Copy YouTube transcripts in 1 click. Export clean text, SRT, or Markdown with timestamps and chapters. Free, fast, and completely private.",
+    "downloadUrl": "https://chromewebstore.google.com/detail/transcriptkit-youtube-tra/jhkhpmmaiandgkfmlpcnteilpmohngiod",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "12"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/icons/128.png" alt="TranscriptKit Logo" width="32" height="32">
+        <span>TranscriptKit</span>
+      </a>
+      
+      <nav class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#demo" class="nav-link">Interactive Demo</a>
+        <a href="#screenshots" class="nav-link">Screenshots</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="support.html" class="nav-link">Support</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+      </nav>
+      
+      <div class="nav-actions">
+        <a href="https://chromewebstore.google.com/detail/transcriptkit-youtube-tra/jhkhpmmaiandgkfmlpcnteilpmohngiod" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="21.17" y1="8" x2="12" y2="8"></line>
+            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+          </svg>
+          Add to Chrome
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        100% Free · No Sign-Up · Zero Tracking · Open MV3
+      </div>
+      
+      <h1 class="hero-title">
+        Copy Any YouTube Transcript <br>
+        <span class="text-gradient">in 1 Click.</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        The fastest, cleanest extension to extract, search, and export YouTube transcripts. 
+        Export as clean Text, SubRip SRT subtitles, or Markdown with timestamps and chapters. 
+        Designed for students, researchers, creators, and note-takers.
+      </p>
+      
+      <div class="hero-cta">
+        <a href="https://chromewebstore.google.com/detail/transcriptkit-youtube-tra/jhkhpmmaiandgkfmlpcnteilpmohngiod" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="21.17" y1="8" x2="12" y2="8"></line>
+            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+          </svg>
+          Add to Chrome — It's Free
+        </a>
+        <a href="#demo" class="btn btn-secondary btn-lg">
+          Try Interactive Demo ↓
+        </a>
+      </div>
+      
+      <div class="hero-proof">
+        <div class="hero-proof-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          5.0 ★ Rated on Chrome Web Store
+        </div>
+        <div class="hero-proof-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          100% Local Browser Execution
+        </div>
+        <div class="hero-proof-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          No Account or Login Required
+        </div>
+        <div class="hero-proof-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Instant Alt+Shift+C Shortcut
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo Sandbox Section -->
+  <section class="demo-section" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Sandbox</span>
+        <h2 class="section-title">Test TranscriptKit Live Right Now</h2>
+        <p class="section-desc">Experience how clean and fast transcript formatting works before installing.</p>
+      </div>
+      
+      <div class="demo-card">
+        <!-- Extension UI Mockup Simulation -->
+        <div class="demo-mockup-wrapper">
+          <div class="mockup-header-bar">
+            <div class="mockup-dots">
+              <span class="mockup-dot red"></span>
+              <span class="mockup-dot yellow"></span>
+              <span class="mockup-dot green"></span>
+            </div>
+            <span>TranscriptKit Popup — Live Preview</span>
+          </div>
+          
+          <div class="mockup-container">
+            <div class="mockup-video-info">
+              <div class="mockup-video-title">How Large Language Models Work (In Simple Terms)</div>
+              <div class="mockup-video-channel">Computer Science Explained · 12 segments</div>
+            </div>
+            
+            <div class="mockup-tabs">
+              <button type="button" class="mockup-tab-btn active" data-fmt="txt">Text</button>
+              <button type="button" class="mockup-tab-btn" data-fmt="srt">SRT</button>
+              <button type="button" class="mockup-tab-btn" data-fmt="md">Markdown</button>
+            </div>
+            
+            <div class="mockup-search-row">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#94a3b8;"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="text" id="demoSearch" placeholder="Type to filter (e.g. 'attention', 'tokens')...">
+            </div>
+            
+            <div class="mockup-preview-area" id="demoPreview">
+              <!-- Dynamically populated by script.js -->
+            </div>
+            
+            <div class="mockup-actions">
+              <button type="button" class="btn-mock-copy" id="btnMockCopy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                Copy Transcript
+              </button>
+              <button type="button" class="btn-mock-download" id="btnMockDownload">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download File
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Controls & Explanations -->
+        <div class="demo-controls-wrapper">
+          <div class="demo-controls-header">
+            <h3>Custom Formatting Options</h3>
+            <p>Toggle options in real-time to see how TranscriptKit cleans and organizes transcript data:</p>
+            
+            <div class="control-group">
+              <span class="control-label">Cleaning &amp; Layout</span>
+              
+              <label class="control-checkbox">
+                <input type="checkbox" id="chkTs" checked>
+                <span>Include video timestamps</span>
+              </label>
+              
+              <label class="control-checkbox">
+                <input type="checkbox" id="chkFiller" checked>
+                <span>Remove filler &amp; noise tags</span>
+              </label>
+              <span class="control-hint">Automatically removes [Music], [Applause], and laughter markers.</span>
+              
+              <label class="control-checkbox">
+                <input type="checkbox" id="chkMerge" checked>
+                <span>Merge into natural paragraphs</span>
+              </label>
+              <span class="control-hint">Combines fragmented speech snippets into cohesive, readable paragraphs.</span>
+              
+              <label class="control-checkbox">
+                <input type="checkbox" id="chkChapters">
+                <span>Group by video chapters (Markdown)</span>
+              </label>
+              <span class="control-hint">Separates transcript sections under YouTube chapter headers.</span>
+            </div>
+          </div>
+          
+          <div class="demo-callout-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <div>
+              <strong>Did you know?</strong> In YouTube, clicking any timestamp inside the TranscriptKit popup automatically seeks the video to that exact second!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid Section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Powerful Capabilities</span>
+        <h2 class="section-title">Built for Speed, Accuracy, and Privacy</h2>
+        <p class="section-desc">Everything you need to turn spoken videos into clean, actionable written knowledge.</p>
+      </div>
+      
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="feature-title">3 Export Formats</h3>
+          <p class="feature-desc">Export as clean formatted plain text (.txt), subtitle files (.srt) ready for video editors, or GitHub-flavored Markdown (.md) with headers.</p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </div>
+          <h3 class="feature-title">Live In-Transcript Search</h3>
+          <p class="feature-desc">Find exact quotes, names, or topics in seconds with real-time keyword highlighting and instant match counts.</p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="feature-title">Clickable Timestamps</h3>
+          <p class="feature-desc">Jump straight to any point in the video. Click on any timestamp in the transcript to seek the player right to that moment.</p>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3 class="feature-title">Smart Chapter Support</h3>
+          <p class="feature-desc">If the creator marked chapters in the video, TranscriptKit automatically groups transcript lines under clear chapter titles.</p>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 class="feature-title">Noise Removal &amp; Deduplication</h3>
+          <p class="feature-desc">Strips out annoying `[Music]`, `[Applause]`, and dedupes repeated auto-caption speech cues so your notes read like human prose.</p>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3 class="feature-title">100% Private &amp; Local</h3>
+          <p class="feature-desc">No external servers. No telemetry. No analytics. Transcript extraction runs strictly in-memory inside your Chrome browser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Gallery Section -->
+  <section class="screenshots-section" id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Visual Tour</span>
+        <h2 class="section-title">Clean, Minimal &amp; Native Interface</h2>
+        <p class="section-desc">Designed to fit seamlessly into YouTube's interface without slowing down your browsing.</p>
+      </div>
+      
+      <div class="screenshots-carousel-wrapper">
+        <div class="screenshots-main-view">
+          <img id="featuredShot" src="assets/screenshots/screenshot-1.png" alt="TranscriptKit Chrome Extension Preview">
+        </div>
+        
+        <div class="screenshots-nav-pills">
+          <button type="button" class="shot-pill-btn active" data-shot="1">1. One-Click Copy</button>
+          <button type="button" class="shot-pill-btn" data-shot="2">2. Text, SRT &amp; Markdown</button>
+          <button type="button" class="shot-pill-btn" data-shot="3">3. Intelligent Formatting</button>
+          <button type="button" class="shot-pill-btn" data-shot="4">4. Any Language Support</button>
+          <button type="button" class="shot-pill-btn" data-shot="5">5. 100% Free &amp; Private</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="comparison-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Why TranscriptKit</span>
+        <h2 class="section-title">How TranscriptKit Compares</h2>
+        <p class="section-desc">See why students and researchers choose TranscriptKit over generic alternatives.</p>
+      </div>
+      
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="highlight-col">TranscriptKit</th>
+              <th>YouTube Native Panel</th>
+              <th>Third-Party Web Scrapers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cost</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> 100% Free Forever</td>
+              <td><span class="check-icon">✓</span> Free</td>
+              <td><span class="cross-icon">✕</span> Freemium / Paywalls</td>
+            </tr>
+            <tr>
+              <td>1-Click Copy</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> Yes (or Alt+Shift+C)</td>
+              <td><span class="cross-icon">✕</span> Manual select all &amp; copy</td>
+              <td><span class="cross-icon">✕</span> Paste link into external site</td>
+            </tr>
+            <tr>
+              <td>Export Formats</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> Text, SRT Subtitles, Markdown</td>
+              <td><span class="cross-icon">✕</span> Raw unformatted text only</td>
+              <td><span class="cross-icon">✕</span> Mostly plain text</td>
+            </tr>
+            <tr>
+              <td>In-Transcript Search</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> Built-in with match counter</td>
+              <td><span class="check-icon">✓</span> Basic search</td>
+              <td><span class="cross-icon">✕</span> None</td>
+            </tr>
+            <tr>
+              <td>Noise &amp; Filler Removal</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> Automatically strips [Music]</td>
+              <td><span class="cross-icon">✕</span> Kept in text</td>
+              <td><span class="cross-icon">✕</span> Kept in text</td>
+            </tr>
+            <tr>
+              <td>Auto-Caption Deduplication</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> Clean sliding-window dedupe</td>
+              <td><span class="cross-icon">✕</span> Overlapping repetitive text</td>
+              <td><span class="cross-icon">✕</span> Overlapping repetitive text</td>
+            </tr>
+            <tr>
+              <td>Privacy &amp; Telemetry</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> Zero data collection</td>
+              <td><span class="cross-icon">✕</span> Logged by Google</td>
+              <td><span class="cross-icon">✕</span> Ads, trackers, cookies</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="steps-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Quick Start</span>
+        <h2 class="section-title">How It Works in 3 Simple Steps</h2>
+        <p class="section-desc">No complicated configuration. Ready to use in less than 30 seconds.</p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3 class="step-title">Install from Chrome Store</h3>
+          <p class="step-desc">Click "Add to Chrome". No sign-up, credit card, or account registration needed.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3 class="step-title">Open Any YouTube Video</h3>
+          <p class="step-desc">Works on standard videos, YouTube Shorts, and premiere recordings with closed captions.</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3 class="step-title">Click Transcript or Press Shortcut</h3>
+          <p class="step-desc">Click the extension icon, use the on-page "Transcript" button, or press <code>Alt+Shift+C</code> to copy instantly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">Everything you need to know about TranscriptKit.</p>
+      </div>
+      
+      <div class="faq-accordion">
+        <div class="faq-item active">
+          <button type="button" class="faq-question">
+            <span>Is TranscriptKit really 100% free?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! TranscriptKit is 100% free with no hidden subscriptions, no daily limits, and no paid tiers. You can extract transcripts from unlimited videos of any length (even 4+ hour podcasts).
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Does it work on auto-generated captions?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! It works on both creator-uploaded manual captions and YouTube's automatic speech recognition (ASR) captions. It even automatically cleans up the annoying repeated words that YouTube's auto-captions generate.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Does it support YouTube Shorts?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! You can open any YouTube Short (youtube.com/shorts/...) and TranscriptKit will extract the captions just like a regular video.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>What permissions does the extension require and why?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            TranscriptKit requires only two minimal permissions:
+            <ul>
+              <li><strong>storage:</strong> Used strictly on your local device to remember your preferred format (Text/SRT/Markdown) and timestamp toggles.</li>
+              <li><strong>https://www.youtube.com/*:</strong> Required solely to read captions on YouTube watch pages and inject the convenient on-page button.</li>
+            </ul>
+            No broad web permissions are requested, and zero data is sent to external servers.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>Can I customize the keyboard shortcut?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes! The default shortcut is <code>Alt+Shift+C</code>. You can customize it at any time by navigating to <code>chrome://extensions/shortcuts</code> in your Chrome browser.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question">
+            <span>How does clickable timestamp seeking work?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Whenever you click a timestamp link inside the transcript list, TranscriptKit communicates directly with the HTML5 video element on the YouTube tab to set <code>video.currentTime</code> to that exact moment.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Start Extracting Transcripts in Seconds</h2>
+        <p>Join thousands of researchers, students, and creators who save hours taking notes from video content.</p>
+        <a href="https://chromewebstore.google.com/detail/transcriptkit-youtube-tra/jhkhpmmaiandgkfmlpcnteilpmohngiod" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="21.17" y1="8" x2="12" y2="8"></line>
+            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+          </svg>
+          Install TranscriptKit for Free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="assets/icons/128.png" alt="TranscriptKit Logo" width="30" height="30">
+            <span>TranscriptKit</span>
+          </div>
+          <p>
+            The fastest, 100% free tool to copy and export YouTube transcripts in clean Text, SRT, and Markdown formats.
+          </p>
+        </div>
+        
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#demo">Live Demo</a></li>
+              <li><a href="#screenshots">Screenshots</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Support &amp; Legal</h4>
+            <ul>
+              <li><a href="support.html">Help &amp; Support</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h4>Download</h4>
+            <ul>
+              <li><a href="https://chromewebstore.google.com/detail/transcriptkit-youtube-tra/jhkhpmmaiandgkfmlpcnteilpmohngiod" target="_blank" rel="noopener noreferrer">Chrome Web Store</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>&copy; 2026 TranscriptKit. All rights reserved. Not affiliated with YouTube™ or Google LLC.</div>
+        <div>Free &amp; Open Manifest V3 Extension</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Box -->
+  <div class="toast-notice" id="toastNotice">
+    Transcript copied to clipboard!
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+
