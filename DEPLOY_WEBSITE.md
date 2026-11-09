@@ -65,7 +65,7 @@ Referring to your Developer Dashboard screen (**"Additional fields"** section):
 
 ## ✨ Features Included on the Website
 
-1. **Direct Chrome Web Store Link**: Big "Add to Chrome" CTA buttons pointing straight to your extension ID (`jhkhpmmaiandgkfmlpcnteilpmohngiod`).
+1. **Direct Chrome Web Store Link**: Big "Add to Chrome" CTA buttons pointing straight to your extension ID (`jhkhpmmaiandgkfmlpcneilpmohngiod`).
 2. **Interactive Live Demo Sandbox**: Visitors can test Text, SRT, and Markdown exports, toggle timestamps, remove filler, and test search directly on the webpage.
 3. **SEO Optimization**: Pre-configured meta tags, OpenGraph cards, Twitter cards, and Schema.org `SoftwareApplication` structured data.
 4. **Dedicated Support Page**: Includes FAQs, troubleshooting steps, and support contact details to ensure swift Chrome Web Store review approval.
