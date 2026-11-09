@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Promo marquee</title>
+  <link rel="stylesheet" href="tk-popup.css">
+  <style>
+    html, body { margin: 0; width: 1400px; height: 560px; overflow: hidden; background: #0e1a2b; }
+    .tile {
+      width: 1400px; height: 560px;
+      background: #0e1a2b; color: #fff;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    .glow {
+      position: absolute; width: 520px; height: 520px; border-radius: 50%;
+      background: #1f4fe0; filter: blur(140px); opacity: 0.18;
+      right: 80px; top: -80px;
+    }
+    .left {
+      position: absolute; left: 80px; top: 50%;
+      transform: translateY(-50%);
+      width: 560px;
+    }
+    .icon-wrap {
+      width: 72px; height: 72px;
+      background: #f2f5f7;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+    .icon-wrap img { width: 72px; height: 72px; display: block; }
+    h1 {
+      margin: 0; font-size: 56px; letter-spacing: -0.045em;
+      font-weight: 700; line-height: 1;
+    }
+    p {
+      margin: 16px 0 0; font-size: 22px; font-weight: 600;
+      color: #c5d0de; max-width: 480px; line-height: 1.35;
+    }
+    .right {
+      position: absolute; right: 90px; top: 50%;
+      transform: translateY(-50%) scale(1.18);
+      transform-origin: center right;
+    }
+  </style>
+</head>
+<body>
+  <div class="tile">
+    <div class="glow"></div>
+    <div class="left">
+      <div class="icon-wrap"><img src="../../icons/128.png" alt=""></div>
+      <h1>TranscriptKit</h1>
+      <p>Copy YouTube transcripts instantly — Text, SRT, Markdown, or an AI-ready prompt.</p>
+    </div>
+    <div class="right">
+      <div class="tk-popup">
+        <header>
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>TranscriptKit</span>
+          </div>
+          <div class="stats-badge">412 words · ~3 min</div>
+        </header>
+        <main>
+          <div class="video-meta">
+            <div class="video-title">Sampling strategies for field research</div>
+            <div class="video-author">Open Methods Lab</div>
+          </div>
+          <div class="field-row">
+            <label class="field-label">Language</label>
+            <div class="fake-select"><span>English</span></div>
+          </div>
+          <div class="formats-bar">
+            <button class="fmt-btn active" type="button">Text</button>
+            <button class="fmt-btn" type="button">SRT</button>
+            <button class="fmt-btn" type="button">Markdown</button>
+          </div>
+          <div class="preview-container">
+            <textarea readonly>Research methods start with a clear question. You define the population, pick a sampling strategy, and decide how you will measure the outcome.
+
+A good study design reduces bias before you collect a single data point.</textarea>
+          </div>
+          <div class="actions">
+            <button class="btn primary" type="button">Copy</button>
+            <button class="btn" type="button">Download</button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
